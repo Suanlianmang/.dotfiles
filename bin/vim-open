@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+    echo Parameter 
+else
+    selected=$(find ~/Desktop ~/Desktop/Project ~/Desktop/AV ~/Public ~/Public/Waltr -mindepth 1 -maxdepth 3 -type f | fzf)
+fi
+
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+nvim $selected
