@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    branch=$1
+    cp main/.env $branch/
+    cp main/api_django/firebase_service_key.json $branch/api_django/
+    python3 -m venv $branch/env
+    $branch/env/bin/python -m pip install --upgrade pip
+    $branch/env/bin/python -m pip install -r $branch/requirements.txt
+
+else
+    exit 0
+fi
+
