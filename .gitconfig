@@ -1,0 +1,28 @@
+
+
+# This is Git's per-user configuration file.
+[include]
+  	path = ~/.gitconfig-personal
+
+
+[includeIf "gitdir:~/Public/Waltr/"]
+  	path = ~/.gitconfig-waltr
+
+
+[init]
+    defaultBranch = main
+
+[alias]
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+    sw = switch 
+    lg = log --oneline --decorate --all --graph
+
+[core]
+    editor = nvim
+
+[merge]
+    tool = vimdiff
+
