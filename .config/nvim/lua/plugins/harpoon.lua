@@ -4,11 +4,12 @@ return {
         "nvim-lua/plenary.nvim"
     },
     config = function()
-        local harpoon = require("harpoon")
-        vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-        vim.keymap.set("n", "<leder>w", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-        vim.keymap.set("n", "<leader>u", function() harpoon:list():select(1) end)
-        vim.keymap.set("n", "<leader>i", function() harpoon:list():select(2) end)
-        vim.keymap.set("n", "<leader>o", function() harpoon:list():select(3) end)
+        local mark = require("harpoon.mark")
+        local ui = require("harpoon.ui")
+        vim.keymap.set("n", "<leader>a", mark.add_file)
+        vim.keymap.set("n", "<leader>w", ui.toggle_quick_menu)
+        vim.keymap.set("n", "<leader>u", function() ui.nav_file(1) end)
+        vim.keymap.set("n", "<leader>i", function() ui.nav_file(2) end)
+        vim.keymap.set("n", "<leader>o", function() ui.nav_file(3) end)
     end
 }

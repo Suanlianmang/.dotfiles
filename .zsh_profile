@@ -2,6 +2,7 @@
 
 
 export PATH="$HOME/bin/.local:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 py-env(){
 	source ./env/bin/activate

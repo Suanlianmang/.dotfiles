@@ -30,6 +30,7 @@ return {
                 "rust_analyzer",
                 "gopls",
                 "pyright",
+                "htmx",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -44,6 +45,11 @@ return {
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
+            snippet = {
+                expand = function(args)
+                    require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+                end,
+            },
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -51,6 +57,7 @@ return {
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
+                { name = 'luasnip' },
                 { name = 'nvim_lsp' },
             }, {
                 { name = 'buffer' },
