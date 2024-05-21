@@ -30,6 +30,8 @@ alias vm-t="ssh -i ~/.aws_ec2_keys/waltr/waltr_backend.pem ubuntu@100.25.213.111
 alias vm-b="ssh -i ~/.aws_ec2_keys/waltr/waltr_backend_v2.pem ubuntu@13.233.167.232"
 alias aws_profile="export AWS_PROFILE=ZeSession"
 alias v="nvim"
+alias vb="nvim ~/books.md"
+alias vn="nvim ~/notes.md"
 
 
 bindkey -s ^f "vim-open\n"
