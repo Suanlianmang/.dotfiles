@@ -1,6 +1,5 @@
 
 
-
 export PATH="$HOME/bin/.local:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
@@ -24,7 +23,8 @@ alias gd-w="cd ~/Public/Waltr/"
 alias gd-p="cd ~/Desktop/Project/"
 alias ec2-1="ssh -i ~/.aws_ec2_keys/bk-backend-1.pem ubuntu@ec2-13-233-205-36.ap-south-1.compute.amazonaws.com"
 alias vm-p="ssh -i ~/.aws_ec2_keys/waltr/waltr_api_ec2_key.pem ubuntu@ec2-43-204-242-169.ap-south-1.compute.amazonaws.com"
-alias vm-pp="ssh -i ~/.aws_ec2_keys/waltr/waltr_api_ec2_key.pem ubuntu@ec2-3-109-58-88.ap-south-1.compute.amazonaws.com"
+alias vm-pp="ssh -i ~/.aws_ec2_keys/waltr/waltr_api_ec2_key.pem ubuntu@ec2-65-1-3-162.ap-south-1.compute.amazonaws.com"
+alias vm-ppp="ssh -i ~/.aws_ec2_keys/waltr/waltr_backend_v2.pem ubuntu@ec2-43-205-145-60.ap-south-1.compute.amazonaws.com"
 alias vm-d="ssh -i ~/.aws_ec2_keys/waltr/waltr_api_ec2_key.pem ubuntu@13.126.158.1"
 alias vm-t="ssh -i ~/.aws_ec2_keys/waltr/waltr_backend.pem ubuntu@100.25.213.111"
 alias vm-b="ssh -i ~/.aws_ec2_keys/waltr/waltr_backend_v2.pem ubuntu@13.233.167.232"
@@ -38,6 +38,7 @@ bindkey -s ^f "vim-open\n"
 bindkey -s ^d "tmux-zesession\n"
 
 export FZF_DEFAULT_OPTS="--preview 'if [[ -d {} ]]; then tree {}; else cat {}; fi'"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 
 

@@ -1,0 +1,15 @@
+
+
+theme = catppuccin-mocha
+
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-style-blink = false
+
+background-opacity = .85
+
+clipboard-read = allow
+clipboard-write = allow
+macos-non-native-fullscreen = true
+
+

@@ -59,10 +59,10 @@ return {
             sources = cmp.config.sources({
                 { name = 'luasnip' },
                 { name = 'nvim_lsp' },
-            }, {
                 { name = 'buffer' },
             })
         })
+
 
         vim.diagnostic.config({
             float = {
@@ -77,5 +77,9 @@ return {
         vim.keymap.set("n", "K", vim.lsp.buf.hover,  {})
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+        -- Go to the next diagnostic
+        vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+        -- Go to the previous diagnostic
+        vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
     end
 }
