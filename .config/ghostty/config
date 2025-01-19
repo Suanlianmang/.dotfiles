@@ -2,14 +2,25 @@
 
 theme = catppuccin-mocha
 
-cursor-style = block
-shell-integration-features = no-cursor
-cursor-style-blink = false
 
-background-opacity = .85
+background-opacity = 0.85
+background-blur-radius = 20
+
 
 clipboard-read = allow
 clipboard-write = allow
+
+
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
+
+macos-titlebar-style = transparent
 macos-non-native-fullscreen = true
 
+working-directory = home
+window-inherit-working-directory = false
 
+window-padding-x = 10
+window-padding-y = 10
